@@ -2,14 +2,14 @@
 
 #R Script Template, a base script to begin any R project
 
-#Christopher Dobbe, Merkle
+#Chris
 
 #This porject is:
 
 ######################################################################
 
 #Set working directory
-setwd("C:\\Users\\cdobbe\\Desktop\\R Files")
+setwd("C:\\Users\\*******\\*******\\R Files")
 
 #Load the packages and libraries
 library(dplyr)
