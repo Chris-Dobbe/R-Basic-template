@@ -19,7 +19,7 @@ library(readr)
 library(stringr)
 
 #Read the exact file or select the file that you are going to use
-data1 <- read_csv("minecraft-items.csv")
+data1 <- read_csv("xxxxxxx.csv")
 #data1 <- file.choose()
 #data1 <-read_csv(data1)
 
