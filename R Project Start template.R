@@ -9,14 +9,15 @@
 ######################################################################
 
 #Set working directory
-setwd("C:\\Users\\*******\\*******\\R Files")
+setwd("C:/Users/*******/*******/R Files")
 
-#Load the packages and libraries
+#Load the packages and libraries, or d/l any using install.packages("???")
 library(dplyr)
 library(magrittr)
 library(tidyr)
 library(readr)
 library(stringr)
+library(ggplot2)
 
 #Read the exact file OR select the file that you are going to use
 data1 <- read_csv("xxxxxxx.csv")
