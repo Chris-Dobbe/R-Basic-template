@@ -18,6 +18,8 @@ library(tidyr)
 library(readr)
 library(stringr)
 library(ggplot2)
+library(gridExtra)
+library(DescTools)
 
 #Read the exact CSV file OR select the file that you are going to use
 data1 <- read.csv('xxxxxxx.csv')
