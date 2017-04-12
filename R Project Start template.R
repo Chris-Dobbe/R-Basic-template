@@ -19,10 +19,11 @@ library(readr)
 library(stringr)
 library(ggplot2)
 
-#Read the exact file OR select the file that you are going to use
+#Read the exact CSV file OR select the file that you are going to use
 data1 <- read_csv("xxxxxxx.csv")
-#data1 <- file.choose()
-#data1 <-read_csv(data1)
+#data1 <- read_csv("xxxxx.tsv, sep = "\t", header = TRUE) for any TSV files
+#data1 <- file.choose() can be used if your file is not in the working director established earlier
+
 
 #Open the data view
 View(data1)
