@@ -21,7 +21,7 @@ library(ggplot2)
 
 #Read the exact CSV file OR select the file that you are going to use
 data1 <- read_csv("xxxxxxx.csv")
-#data1 <- read_csv("xxxxx.tsv, sep = "\t", header = TRUE) for any TSV files
+#data1 <- read_csv("xxxxx.tsv", sep = "\t", header = TRUE) for any TSV files
 #data1 <- file.choose() can be used if your file is not in the working director established earlier
 
 
