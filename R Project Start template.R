@@ -20,10 +20,12 @@ library(stringr)
 library(ggplot2)
 library(gridExtra)
 library(DescTools)
-library(RDCOMClient)
+library(RDCOMClient)  ## for importing specific cells from an Excel file
+library(gdata)  ##for importing entire xls files
 
 #Read the exact CSV file OR select the file that you are going to use
 data1 <- read.csv('xxxxxxx.csv')
+#data1 <- read.xls("xxxx.xlsx")
 #data1 <- read.csv('xxxxx.tsv', sep = "\t", header = TRUE) #for any TSV files
 #data1 <- file.choose() #can be used if your file is not in the working director established earlier
 #data1 <- XLGetRange(file = "C:/Users/***********/Excel file.xlsx", sheet = "sheet1", range = "A1:B21", header = TRUE) #imports specific range of cells from an Excel file
