@@ -24,7 +24,7 @@ library(RDCOMClient)  ## for importing specific cells from an Excel file
 library(gdata)  ##for importing entire xls files
 library(fBasics)
 
-#Read the exact CSV file OR select the file that you are going to use
+### Read the exact CSV file OR select the file that you are going to use
 data1 <- file.choose() # Allows for manual selection from folder location, paired with below
   data <- read_csv(data1)  
 #data1 <- read_csv("file_name.csv") #loads in the CSV to a tibble, easier to work with
@@ -36,8 +36,11 @@ data1 <- file.choose() # Allows for manual selection from folder location, paire
 #Open the data view
 View(data1)
 
-#Basic summary functions to understand the data
+### Basic summary functions to understand the data
 names(data1)
 head(data1)
 str(data1)
 summary(data1)
+
+### Once completing your code, export a CSV to a specified location
+write.csv(data1, "/Users/**computerUserName**/Desktop/dataName.csv")
