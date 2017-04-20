@@ -43,6 +43,10 @@ head(data1)
 str(data1)
 summary(data1)
 
+### Convert any columns to a factor, or other data types, if needed
+data1[,"column.namel"] <- lapply(data1[,"column.name"],as.factor)  #converts specified column to factor
+str(data1)  #double check data types to ensure change happened
+
 ### Create new variables with filtered or subsets of the original dataset
 newdata1 <- data1 %>% filter(column.name == "variable_1", column.name == "variable_2")  # filter data by rows, returning only rows with a certain variable
 newdata2 <- data1 %>% arrange(column.name, column.name)  # arrange data by rows, returning only rows that match that variable
