@@ -18,11 +18,11 @@ library(tidyr)
 library(readr)
 library(stringr)
 library(ggplot2)
-library(gridExtra)
-library(DescTools)
-library(RDCOMClient)  ## for importing specific cells from an Excel file
-library(gdata)  ##for importing entire xls files
-library(fBasics)
+#library(gridExtra)
+#library(DescTools)
+#library(RDCOMClient)  ## for importing specific cells from an Excel file
+#library(gdata)  ##for importing entire xls files
+#library(fBasics)
 
 # Begin by loading in the dataset using the appropriate method
 
@@ -56,9 +56,10 @@ newdata3 <- data1 %>% select(column.name, column.name)  # select specific column
 newdata4 <- data1 %>% group_by(column.name)  # groups data by a column variables
 newdata5 <- data1 %>% summarise(number = n())  # summarise data by a number of occurences
 newdata6 <_ data1 %>% summarise_each(funs(sum), solumn.name, column.name, column.name)  #summarise each column by total of column
+newdata7 <- mutate(data1, new.variable = var_1 + var_2)  # creates new column based on combination of existing columns
 
 ### Combine and Compare data sets (like a lookup table)
-newdata7 <- data1 %>% semi_join(data1, lookup_table1, by="column.name")  # shows rows of data that DO match the other lookup table
+newdata8 <- data1 %>% semi_join(data1, lookup_table1, by="column.name")  # shows rows of data that DO match the other lookup table
 newdata8 <- anti_join(data1, lookup_table1, by="column.name")  # shows rows of data that DO NOT match the other table
 
 
