@@ -60,8 +60,11 @@ newdata7 <- mutate(data1, new.variable = var_1 + var_2)  # creates new column ba
 
 ### Combine and Compare data sets (like a lookup table)
 newdata8 <- data1 %>% semi_join(data1, lookup_table1, by="column.name")  # shows rows of data that DO match the other lookup table
-newdata8 <- anti_join(data1, lookup_table1, by="column.name")  # shows rows of data that DO NOT match the other table
+newdata9 <- anti_join(data1, lookup_table1, by="column.name")  # shows rows of data that DO NOT match the other table
 
+### Remove any rows that have an N/A value within a specific column
+data2 <- data1 %>% drop_na(column.name)  #removes rows with NA in specific column
+summary(data2)  # will show summary of new data frame, including number of NA's in each column
 
 ### Once completing your code, export a CSV to a specified location
 write.csv(data1, "/Users/**computerUserName**/Desktop/dataName.csv")
